@@ -3,6 +3,29 @@
 ## **Project Description**
 This project combines **machine learning algorithms** and **blockchain technology** to detect and report fake social media profiles. It tackles the increasing challenge of online identity fraud by creating a **decentralized**, **transparent**, and **immutable** reporting mechanism.
 
+
+### **HOME PAGE**
+
+![image](https://github.com/user-attachments/assets/4f350473-b911-4abc-8568-b2b6940a4aec)
+
+
+
+### **Search Page**
+
+![image](https://github.com/user-attachments/assets/570eb419-8948-435b-9e9e-16d2ac85723f)
+
+
+### **Detection Page**
+
+![Screenshot 2024-10-15 124614](https://github.com/user-attachments/assets/7c0603d4-bb88-44e7-9d48-f291d90ba435)
+
+
+### **Reporting Page**
+
+
+![Screenshot 2024-11-11 011524](https://github.com/user-attachments/assets/27120346-7331-4f77-b2a7-c46e0c7df854)
+
+
 ### **Key Features**
 - **Fake Profile Detection**:  
   Utilizes **Random Forest** and **Decision Tree** algorithms to analyze **user behavior**, **content attributes**, and **profile metrics** for precise classification.
