@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Profile Fake/Real Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Instagram Profile Checker Form -->
+        <form action="/predict" method="post">
+            <h1>Fake or Real Detector</h1>
+            <form id="fakeRealForm">
+
+
+            <div class="form-columns">
+                <div class="column">
+
+
+            <div class="input-group">
+                <label for="profile_pic">Profile Photo (1 if exists, 0 if not):</label>
+                <input type="number" id="profile_pic" name="profile_pic" min="0" max="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="private_account">Private Account (1 if private, 0 if not):</label>
+                <input type="number" id="private_account" name="private_account" min="0" max="1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Numbs_length_of_username">Numbs_length_of_username:</label>
+                <input type="number" id="Numbs_length_of_username" name="Numbs_length_of_username" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="FullName_In_Words">FullName_In_Words:</label>
+                <input type="number" id="FullName_In_Words" name="FullName_In_Words" min="0" required>
+            </div>
+
+                </div>
+
+
+
+                <div class="column">
+
+            <div class="input-group">
+                <label for="Numbs_length_of_Fullname">Numbs_length_of_Fullname:</label>
+                <input type="number" id="Numbs_length_of_Fullname" name="Numbs_length_of_Fullname" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Name==Username">Name == Username:</label>
+                <input type="number" id="Name==Username" name="Name==Username" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Description_Length">Description Length:</label>
+                <input type="number" id="Description_Length" name="Description_Length" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="External_URL">External URL(1 If present):</label>
+                <input type="number" id="External_URL" name="External_URL" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Total_posts">Total Posts:</label>
+                <input type="number" id="Total_posts" name="Total_posts" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Followers">Followers:</label>
+                <input type="number" id="Followers" name="Followers" min="0" required>
+            </div>
+
+            <div class="input-group">
+                <label for="Follows">Follows:</label>
+                <input type="number" id="Follows" name="Follows" min="0" required>
+            </div>
+
+
+                </div>
+
+            <input type="submit" value="Check">
+
+            
+
+        </form>
+    </form>
+
+ 
+
+        <!-- Prediction and Report button -->
+        {% if prediction_text %}
+            <h2>Prediction: {{ prediction_text }}</h2>
+            <div class="reportButton">
+            <button class="reportButton">Report this Profile</button class="reportButton">
+        {% endif %}
+</div>
+    </div>
+
+     <!-- Image Section -->
+     <div class="img2">
+        
+        <img src="static\screen-removebg-preview.png" alt=" Image" class="side-image">
+         </div>
+
+
+    <script>
+        // Handle form submission
+        document.getElementById('fakeRealForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Show the "Report" button after checking
+            document.getElementById('reportButton').style.display = 'block';
+        });
+
+        // Redirect to another HTML page
+        function redirectToReport() {
+            // Change this to the page you want to redirect to
+            window.location.href = "http://127.0.0.1:5500/report.html";
+        }
+    </script>
+
+
+
+</body>
+</html>
