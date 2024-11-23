@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Fake Profile Reporting</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Report a Fake Instagram Profile</h1>
+        <form id="reportForm">
+            <label for="profileLink">Instagram Profile Link:</label>
+            <input type="text" id="profileLink" required>
+
+            <label for="reason">Reason for Reporting:</label>
+            <select id="reason" required>
+                <option value="I just don't like it">I just don't like it</option>
+                <option value="It's a spam">It's a spam</option>
+                <option value="Nudity or sexual activity">Nudity or sexual activity</option>
+                <option value="Hate speech or symbols">Hate speech or symbols</option>
+                <option value="Violence or dangerous organizations">Violence or dangerous organizations</option>
+                <option value="False information">False information</option>
+                <option value="Bullying or harassment">Bullying or harassment</option>
+                <option value="Scam or fraud">Scam or fraud</option>
+                <option value="Intellectual property violations">Intellectual property violations</option>
+                <option value="Suicide or self-injury">Suicide or self-injury</option>
+                <option value="Sale of illegal or regulated goods">Sale of illegal or regulated goods</option>
+                <option value="Eating disorders">Eating disorders</option>
+                <option value="Drugs">Drugs</option>
+                <option value="Something else">Something else</option>
+            </select>
+
+            <label for="description">Description (optional):</label>
+            <textarea id="description"></textarea>
+
+            <label for="username">Your Instagram Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" required>
+
+            <button type="submit">Submit Report</button>
+        </form>
+
+        <h2>Check Submitted Reports</h2>
+        <form id="checkReportForm">
+            <label for="reportId">Report ID:</label>
+            <input type="text" id="reportId" required>
+            <button type="button" onclick="checkReport()">Check Report</button>
+        </form>
+        <div id="loadingIndicator" style="display:none;">Loading...</div>
+
+        <div id="reportResult"></div>
+    </div>
+    
+    <script src="script.js" defer></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+<script type="text/javascript">
+   (function() {
+      emailjs.init("Nl6mMF0fBJtiJWZLB"); // Replace with your User ID from EmailJS
+   })();
+</script>
+
+</body>
+</html>
