@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Profile Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="highlight">Instagram Profile Search</h2>
+    <form id="searchForm">
+
+
+        <div class="search-block">
+          
+            <input type="search"  id="profileName" placeholder="Username">
+            <div class="icon"></div>
+          </div>
+
+
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="account-check">
+        <h3 class="high">IS This the account you searched for?</h3>
+        
+
+        <div class="container">
+            <div class="button-wrap">
+                <input type="radio" name="accept-offers" id="yes-button" class="hidden radio-label" checked>
+                <label for="yes-button" class="button-label">
+                    <h1>Yes</h1>
+                </label>
+        
+                <input type="radio" name="accept-offers" id="no-button" class="hidden radio-label">
+                <label for="no-button" class="button-label">
+                    <h1>No</h1>
+                </label>
+        
+                <input type="radio" name="accept-offers" id="maybe-button" class="hidden radio-label">
+                <label for="maybe-button" class="button-label">
+                    <h1>Maybe</h1>
+                </label>
+            </div>
+        </div>
+        
+      
+
+
+
+      
+    <div id="detectionOffer" style="display: none;">
+        <h3 class="highlight">Want to detect the profile?</h3>
+        <a id="detectLink" href="http://127.0.0.1:5000/" target="_blank" class="detect-button">Go to Detection</a>
+    </div>
+
+    <script src="scripts.js"></script>
+    <canvas class="background"></canvas>
+</body>
+</html>
